@@ -339,3 +339,68 @@ h1 {
   transform-origin: bottom;
   opacity: 0.8;
 }
+
+/* When the page is resized or viewed on various screens and devices then the layout is responsive 
+and adapts to my viewport */
+
+@media only screen and (max-width: 1000px ) {
+  
+  h2 {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 30px;
+    padding-left: 5px;
+    margin-right: 60px;
+
+  }
+  .page-wrapper {
+    margin-right: 0;
+    margin-left: 5%;
+    grid-template-rows: 70px 220px 70px 200px 200px 200px 200px 200px 70px 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutme"
+      "text"
+      "work"
+      "project1"
+      "project2"
+      "project3"
+      "project4"
+      "project5"
+      "contact-left"
+      "contact-right";
+  }
+
+}
+@media only screen and (max-width: 600px ) {
+  body {
+    margin-right: 5%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    padding-left: 5px;
+    margin-right: 60px;
+  }
+  .page-wrapper {
+    margin-right: 0;
+    margin-left: 5%;
+    grid-template-rows: 70px 220px 70px 200px 200px 200px 200px 200px 70px 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutme"
+      "text"
+      "work"
+      "project1"
+      "project2"
+      "project3"
+      "project4"
+      "project5"
+      "contact-left"
+      "contact-right";
+  }
+}
+
