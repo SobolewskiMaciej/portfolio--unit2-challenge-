@@ -112,3 +112,188 @@ h1 {
   margin-bottom: 10px;
   margin-right: 55px;
 }
+
+.page-wrapper {
+  margin-right: 100px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 150px 350px 200px 200px 200px;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-areas:
+    "aboutme text text"
+    "work project1 project1"
+    "work project2 project3"
+    "work project4 project5"
+    "contact-left contact-right contact-right";
+}
+
+#about {
+  grid-area: aboutme;
+  border-right: solid var(--secondary-color) 10px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.text {
+  grid-area: text;
+  display: flex;
+  font-size: 1.3rem;
+  align-items: center;
+}
+
+#work {
+  grid-area: work;
+  border-right: solid var(--secondary-color) 10px;
+  text-align: right;
+  padding-right: 20px;
+
+}
+
+
+/* this section contains titled images of my applications */
+/* When images of the applications are clicked then the user is taken to that deployed application */
+
+#project1 {
+  grid-area: project1;
+  position: relative;
+  border: solid var(--primary-color) 8px;
+
+  background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
+
+  z-index: 1;
+}
+
+#project2 {
+  grid-area: project2;
+  position: relative;
+  border: solid var(--primary-color) 8px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
+
+  z-index: 1;
+}
+#project3 {
+  grid-area: project3;
+  position: relative;
+  border: solid var(--primary-color) 8px;
+
+  background-image: url(../images/02-portfolio-3.jpg);
+  background-size: cover;
+
+  z-index: 1;
+}
+#project4 {
+  grid-area: project4;
+  position: relative;
+  border: solid var(--primary-color) 8px;
+
+  background-image: url(../images/digital-marketing-meeting.jpg);
+  background-size: cover;
+
+  z-index: 1;
+}
+
+#project5 {
+  grid-area: project5;
+  position: relative;
+  border: solid var(--primary-color) 8px;
+
+  background-image: url(../images/02-run-buddy.jpg);
+  background-size: cover;
+
+  z-index: 1;
+}
+
+#headline {
+  min-width: 200px;
+  position: absolute;
+  bottom: 30px;
+  text-align: left;
+  padding-left: 30px;
+  justify-content: right;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+/* add opacity effect */
+#project1::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 1s;
+}
+#project2::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 1s;
+}
+#project3::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 1s;
+}
+#project4::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 1s;
+}
+#project5::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 1s;
+}
+
+#project1:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#project2:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+#project3:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+#project4:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+#project5:hover::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
